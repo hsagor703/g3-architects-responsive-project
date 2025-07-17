@@ -191,14 +191,41 @@
 }
 /* score section ends here */
 
+/* sponsor section start here  */
+.sponsor-section
+.sponsor-title-item{
+    max-width: 542px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsor-title{
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.sponsor-company{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsor-company img{
+    filter: grayscale(100%);
+}
+/* sponsor section ends here  */
+
 
 /* responsive section */
 @media screen and (max-width: 576px) {
     .navbar, .nav-items, .feature-items, .feature-body-2, .score-body{
         flex-direction: column;
     }
-    .feature-img{
+    .feature-img, .sponsor-company{
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sponsor-company{
+        gap: 40px;
+        justify-items: center;
     }
     .feature-part-1{
         margin: 20px;
@@ -227,5 +254,10 @@
     }
     .feature-last-img{
         width: 100%;
+    }
+
+    .sponsor-company{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
     }
 }
